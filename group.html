@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="assets/css/tailwind.min.css">
+
+    <!-- icons css -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <title>فين الحساب</title>
+  </head>
+
+  <body>
+
+    <header>
+      <nav class="relative p-2">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="items-center flex gap-5">
+              <img src="assets/img/logo.png" alt="Your Company" class="h-16 rounded-full">
+              <div class="text">
+                <h1 class="font-extrabold text-3xl sm:text-2xl">فيــن الحســاب</h1>
+                <p class="text-sm text-gray-400 font-extrabold">جمع الفلوس وظيفة وأكل الفكة موهبة</p>
+              </div>
+            </div>
+            <div class="image">
+              <img src="assets/img/logo.png" alt="" class="h-16 rounded-full">
+            </div>
+          </div>
+        </div>
+
+        <div id="mobile-menu" hidden class="hidden-menu">
+          <div class="space-y-1 px-2 pt-2 pb-3">
+            <!-- Current: "bg-gray-900 text-white"، Default: "text-gray-100 hover:bg-blue-600 hover:text-white" -->
+            <a href="index.html" aria-current="page" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white">الصفحة الرئيسية</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="group md:px-56 px-5">
+      <div class="container mx-auto">
+        <!-- heading -->
+        <div class="heading mx-auto mt-10">
+          <h2 class="text-5xl font-extrabold">الشبــاب الفخمــة فــي الكليــة الرخمــة</h2>
+          <p class="text-sm text-gray-400 font-extrabold mt-2">قم بتسحيل بياناتك و ابدأ بإنشاء مجموعة جديدة أو انضم إلي مجموعة جديدة لحساب طلباتكم</p>
+        </div>
+
+        <a href="order.html" class="create-order-btn bg-blue-500 text-white text-sm block mt-10 mb-5 w-24 text-center">إضافة طلب</a>
+
+        <div class="md:grid grid-cols-6 gap-10">
+          <div class="col-start-1 col-end-5 box user-box bg-white p-10 rounded-xl">
+            <div class="flex justify-between items-center mb-3 pb-3 w-full">
+              <h3 class="fs-18 font-bold text-blue-700 w-56 text-center">الأعضــاء</h3>
+              <span class="fs-18 w-32 text-center text-blue-500 font-extrabold">التكلفــة الكليــة</span>
+              <span class="fs-18 w-32 text-center text-green-500 font-extrabold">المبلغ المدفوع</span>
+              <span class="fs-18 w-32 text-center text-red-500 font-extrabold">المبلغ الباقــي</span>
+            </div>
+            <!-- user -->
+
+          </div>
+          <div class="col-start-5 col-end-7 box order bg-white p-5 rounded-xl">
+            <h2 class="text-blue-500 font-extrabold text-3xl text-center pb-3 border-b-4 border-blue-100 mb-5 mx-auto">ملخص الاوردر</h2>
+            <div class="flex justify-between items-center bg-gray-100 p-3 rounded-xl">
+              <h4 class="text-blue-600 font-extrabold text-sm">المبلغ الاجمالي</h4>
+              <span class="total-price text-blue-600 font-bold text-sm">22 جنيه</span>
+            </div>
+            <div class="flex justify-between items-center bg-gray-100 p-3 rounded-xl my-5">
+              <h4 class="text-green-600 font-extrabold text-sm">المبلغ المدفوع</h4>
+              <span class="text-green-600 font-bold text-sm"><input type="number" placeholder="0" name="paid" id="paid"> جنيه</span>
+            </div>
+            <div class="flex justify-between items-center bg-gray-100 p-3 rounded-xl">
+              <h4 class="text-red-600 font-extrabold text-sm">المبلغ المتبقي</h4>
+              <span class="balance text-red-600 font-bold text-sm">22 جنيه</span>
+            </div>
+            <button class="mx-auto bg-blue-600 text-white block text-sm font-extrabold mt-5 add-order">إضافة أوردر</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/group.js"></script>
+  </body>
+
+</html>
