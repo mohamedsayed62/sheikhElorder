@@ -3,7 +3,7 @@ let userBox = document.querySelector(".user-box");
 let counter = 0;
 
 function loadResponse() {
-  fetch('http://127.0.0.1:8000/api/getGroup', {
+  fetch('https://sheikhelorderback-production.up.railway.app/api/getGroup', {
     credentials: "include"
   }).then(response => {
   return response.json();
@@ -32,5 +32,6 @@ function loadResponse() {
 }
 
 loadResponse();
+
 
 setInterval(loadResponse, 3000);
