@@ -28,7 +28,7 @@ createBtn.onclick = () => {
   formData.append("admin_id", id);
   formData.append("key", code);
   
-  fetch("http://127.0.0.1:8000/api/storeGroup", {
+  fetch("https://sheikhelorderback-production.up.railway.app/api/storeGroup", {
     method: "POST",
     body: formData,
     headers: {
@@ -48,4 +48,5 @@ createBtn.onclick = () => {
     errorMsgP.textContent = json['message'];
     errorMsgP.classList.remove("hidden");
   })
+
   }
