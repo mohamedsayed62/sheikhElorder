@@ -109,7 +109,7 @@ addOrderBtn.onclick = () => {
 
 
 
-  fetch("http://127.0.0.1:8000/api/storeOrder", {
+  fetch("https://sheikhelorderback-production.up.railway.app/api/storeOrder", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -119,4 +119,5 @@ addOrderBtn.onclick = () => {
     credentials: "include"
     }
   )
+
 }
