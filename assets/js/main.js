@@ -32,7 +32,7 @@ btnSaveUser.addEventListener("click", () => {
   let formData = new FormData();
   formData.append("name", name.value);
   formData.append("image", file);
-  fetch("http://127.0.0.1:8000/api/storeUser", {
+  fetch("https://sheikhelorderback-production.up.railway.app/api/storeUser", {
     method: "POST",
     credentials: "include",
     body:formData
@@ -68,9 +68,10 @@ joinBtn.onclick = () => {
 
   let id = JSON.parse(localStorage.getItem("user"))["id"];
 
-  fetch(`http://127.0.0.1:8000/api/joinGroup/${key}/${id}`)
+  fetch(`https://sheikhelorderback-production.up.railway.app/api/joinGroup/${key}/${id}`)
     .then((response) => {
       return window.open("group.html", "_self");
     });
 }
+
 
