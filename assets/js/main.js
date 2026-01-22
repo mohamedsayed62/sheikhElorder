@@ -73,5 +73,31 @@ joinBtn.onclick = () => {
       return window.open("group.html", "_self");
     });
 }
+joinBtn.addEventListener("click", () => {
+  let key = document.getElementById("code");
+
+  key = key.value;
+
+  let id = JSON.parse(localStorage.getItem("user"))["id"];
+
+  fetch(`https://sheikhelorderback-production.up.railway.app/api/joinGroup/${key}/${id}`)
+    .then((response) => {
+      return window.open("group.html", "_self");
+    });
+})
+joinBtn.addEventListener("touchstart", () => {
+  let key = document.getElementById("code");
+
+  key = key.value;
+
+  let id = JSON.parse(localStorage.getItem("user"))["id"];
+
+  fetch(`https://sheikhelorderback-production.up.railway.app/api/joinGroup/${key}/${id}`)
+    .then((response) => {
+      return window.open("group.html", "_self");
+    });
+})
+
+
 
 
