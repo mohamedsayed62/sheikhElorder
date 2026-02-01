@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="assets/css/tailwind.min.css">
+
+    <!-- icons css -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+
+    <title>فين الحساب</title>
+  </head>
+
+  <body>
+
+    <header>
+      <nav class="relative py-2 md:px-48">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+            <div class="items-center flex gap-5">
+              <img src="assets/img/logo.png" alt="Your Company" class="h-16 rounded-full">
+              <div class="text">
+                <h1 class="font-extrabold text-3xl sm:text-2xl">فيــن الحســاب</h1>
+                <p class="text-sm text-gray-400 font-extrabold">جمع الفلوس وظيفة وأكل الفكة موهبة</p>
+              </div>
+            </div>
+            <!-- image will be added here -->
+          </div>
+        </div>
+
+      </nav>
+    </header>
+
+    <section class="home py-5 xl:px-56 px-5">
+      <div class="container mx-auto">
+
+        <!-- heading -->
+        <div class="heading mx-auto mt-10">
+          <h2 class="text-5xl font-extrabold">مــرحبــا بــك</h2>
+          <p class="text-xl text-gray-400 font-extrabold mt-2">قم بتسحيل بياناتك و ابدأ بإنشاء مجموعة جديدة أو انضم إلي مجموعة جديدة لحساب طلباتكم</p>
+        </div>
+
+        <div class="md:grid grid-cols-6 gap-10 mt-10">
+          <!-- user data -->
+          <div class="box user-box bg-white p-10 rounded-xl text-center col-span-2 scroll">
+            <label class="relative">
+              <img src="assets/img/logo.png" alt="" id="preview" class="h-24 rounded-full mx-auto" width = 100px>
+              <input type="file" name="user_image" id="user-img" hidden>
+            </label>
+            <div class="heading mx-auto my-4">
+              <h3 class="text-2xl font-extrabold">بيانات المستخدم</h3>
+              <p class="text-gray-400 font-extrabold mt-1">عرف نفسك لزملائك</p>
+            </div>
+            <input type="text" name="name" id="user-name" placeholder="الاسم" class="name bg-gray-100 border-2 border-gray-300 block w-full my-4">
+            <button class="btn-save-user bg-black text-white w-full">حفظ البيانات</button>
+
+            <p id="msg" class="text-sm text-gray-500 mt-3 hidden"></p>
+          </div>
+
+          <!-- Group -->
+          <div class="group col-span-4 md:mt-0 mt-5">
+            <div class="box bg-blue-700 p-10 rounded-xl text-center mb-5 scroll">
+              <div class="md:flex items-center text-white lg:gap-10 gap-2">
+                <button id="new-group">
+                  <i class="fa-solid fa-users bg-blue-500 p-5 rounded-xl text-2xl"></i>
+                </button>
+                <div class="text my-5">
+                  <h3 class="font-semibold text-2xl mb-2">إنشاء مجموعة جديدة</h3>
+                  <p class="font-normal text-gray-200">
+                    كن أنت المسئول، أنشئ قائمة طلبات، شارك الرابط مع فريقك، و أدفع دفعة واحدة
+                  </p>
+                </div>
+                <a href="createGroup.html" class="start-btn mx-auto md:w-48 flex md:justify-evenly justify-center items-center gap-2 bg-white px-3 py-3 rounded-xl">
+                  <span class="text-blue-600 font-bold">ابدأ الأن</span>
+                  <i class="fa-solid fa-arrow-left text-blue-600"></i>
+                </a>
+              </div>
+            </div>
+            <!-- join Group -->
+            <div class="box bg-white p-10 rounded-xl text-center scroll">
+              <div class="md:flex gap-14 items-center text-white">
+                <button id="new-group">
+                  <i class="fa-solid fa-users bg-blue-500 p-5 rounded-xl text-2xl"></i>
+                </button>
+                <div class="text">
+                  <h3 class="font-semibold text-2xl mb-2 text-blue-700">الانضمام الي مجموعة</h3>
+                  <p class="font-bold text-gray-400">
+                    أدخل رمز المجموعة للإنضمام و إضافة طلباتك
+                  </p>
+                </div>
+              </div>
+              <div class="join-input md:flex justify-between items-center gap-5 mt-5">
+                <input type="text" name="code" id="code" placeholder="رمز المجموعة" class="bg-gray-100 border-2 border-gray-300 rounded-2xl w-full">
+                <button class="start-btn mx-auto md:mt-0 mt-5 flex items-center gap-2 bg-green-100 px-3 py-3 rounded-xl">
+                  <span class="text-blue-600 font-bold">انضمام</span>
+                  <i class="fa-solid fa-arrow-right-to-bracket text-blue-600"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/handle-scroll.js"></script>
+  </body>
+
+</html>
