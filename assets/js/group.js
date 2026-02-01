@@ -5,7 +5,7 @@ let groupId = arrCookie[0].slice(9);
 if (document.cookie == "") {
   window.open("index.html", "_self");
 }
-fetch(`http://127.0.0.1:8000/api/check/${id}`)
+fetch(`https://sheikhelorderback-production.up.railway.app/api/check/${id}`)
   .then(response => {
     return response.json();
   }).then((json) => {
@@ -96,7 +96,7 @@ function boxOrder(json, counter) {
 let boxsCounter = 0;
 setInterval(
   () => {
-      fetch(`http://127.0.0.1:8000/api/getBoxs/${groupId}`)
+      fetch(`https://sheikhelorderback-production.up.railway.app/api/getBoxs/${groupId}`)
       .then(response => {
         return response.json();
       }).then(json => {
@@ -111,7 +111,7 @@ setInterval(
 
 
 createOrderBtn.addEventListener("click", () => {
-  fetch(`http://127.0.0.1:8000/api/setBox/${groupId}`);
+  fetch(`https://sheikhelorderback-production.up.railway.app/api/setBox/${groupId}`);
 })
 
 
@@ -120,7 +120,7 @@ let counter = 0;
 function loadResponse() {
   let userBox = document.querySelectorAll(".user-box");
   if (!(groupId)) return;
-  fetch(`http://127.0.0.1:8000/api/getGroup/${groupId}`, {
+  fetch(`https://sheikhelorderback-production.up.railway.app/api/getGroup/${groupId}`, {
     credentials: "include"
   }).then(response => {
     return response.json();
@@ -187,7 +187,7 @@ setInterval(() => {
     user.onclick = () => {
       let index = Array.from(document.querySelectorAll(".user-box")).indexOf(user.parentElement);
 
-      fetch(`http://127.0.0.1:8000/api/showOrder/${user.getAttribute("data-user-id")}`)
+      fetch(`https://sheikhelorderback-production.up.railway.app/api/showOrder/${user.getAttribute("data-user-id")}`)
         .then(response => {
           return response.json();
         }).then(json => {
@@ -238,7 +238,7 @@ setInterval(() => {
     btn.onclick = () => {
       let order = btn.parentElement.parentElement.getAttribute("data-order");
       let index = Array.from(document.querySelectorAll(".order")).indexOf(btn.parentElement);
-      fetch(`http://127.0.0.1:8000/api/getOrder/${order}`)
+      fetch(`https://sheikhelorderback-production.up.railway.app/api/getOrder/${order}`)
         .then(response => {
           return response.json();
         }).then(json => {
