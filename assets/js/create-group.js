@@ -28,7 +28,7 @@ createBtn.onclick = () => {
   formData.append("key", code);
   formData.append("admin_id", id);
   
-  fetch("http://127.0.0.1:8000/api/storeGroup", {
+  fetch("https://sheikhelorderback-production.up.railway.app/api/storeGroup", {
     method: "POST",
     body: formData,
     headers: {
