@@ -173,8 +173,6 @@ function loadResponse() {
   clearInterval(loadResponse);
 }
 
-loadResponse();
-
 setInterval(loadResponse, 2000);
 
 
