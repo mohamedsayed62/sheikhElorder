@@ -1,7 +1,6 @@
 let id = JSON.parse(localStorage.getItem("user"))["id"];
 let createOrderBtn = document.querySelector(".create-order");
-let arrCookie = document.cookie.split(";");
-let groupId = arrCookie[0].slice(9);
+let groupId = document.cookie.slice(document.cookie.indexOf("group_id") + "group_id=".length);
 if (document.cookie == "") {
   window.open("index.html", "_self");
 }
