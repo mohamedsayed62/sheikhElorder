@@ -6,17 +6,16 @@ if (localStorage.getItem("user")) {
   fetch(`https://sheikhelorderback-production.up.railway.app/api/getUser/${userId}`)
     .then(response => {
       return response.json();
-    }).then(image => {
-      let preview = document.getElementById("preview");
-      preview.src = image[0]["img"];
+    }).then(user => {
+      if (user["flag"]) {
+        let preview = document.getElementById("preview");
+        preview.src = user["img"];
+      } else {
+        localStorage.removeItem("user");
+      }
     })
 }
 let userImgInput = document.getElementById("user-img");
-
-
-
-
-
 
 let file;
 
