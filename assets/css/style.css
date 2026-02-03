@@ -12,7 +12,7 @@
 
 body {
   direction: rtl;
-  background-color: #f8fcf8;
+  background-color: #f8fafc;
 }
 
 header {
@@ -95,7 +95,7 @@ input[type=number]::-webkit-outer-spin-button {
 /* home */
 
 .home .user-box {
-  height: 350px;
+  height: 390px;
   transition: var(--mainTransition);
 }
 
