@@ -8,10 +8,12 @@ if (localStorage.getItem("user")) {
       return response.json();
     }).then(user => {
       if (user["flag"]) {
-        let preview = document.getElementById("preview");
-        preview.src = user["img"];
+      let preview = document.getElementById("preview");
+      preview.src = user["img"];
+      iptName.value = userName;
       } else {
         localStorage.removeItem("user");
+        iptName.value = "";
       }
     })
 }
