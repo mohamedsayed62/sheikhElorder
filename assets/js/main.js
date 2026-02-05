@@ -73,9 +73,15 @@ joinBtn.onclick = () => {
     .then((response) => {
       return response.json();
     }).then(json => {
-      document.cookie = `group_id=${json["group_id"][0]["id"]}`;
+      if (json["flag"]) {
+        document.cookie = `group_id=${json["group_id"][0]["id"]}`;
 
-    return window.open("group.html", "_self")
+        return window.open("group.html", "_self");
+      } else {
+        let p = document.querySelector(".err-msg");
+        p.classList.remove("hidden");
+        p.textContent = json["error"];
+      }
   });
 }
 
