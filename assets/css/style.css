@@ -99,6 +99,10 @@ input[type=number]::-webkit-outer-spin-button {
   transition: var(--mainTransition);
 }
 
+.home #preview {
+  height: 100px;
+}
+
 .home .group .box {
   transition: var(--mainTransition);
 }
