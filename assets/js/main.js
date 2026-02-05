@@ -2,8 +2,7 @@ if (localStorage.getItem("user")) {
   let userName = JSON.parse(localStorage.getItem("user"))["name"];
   let userId = JSON.parse(localStorage.getItem("user"))["id"];
   let iptName = document.getElementById("user-name");
-  iptName.value = userName;
-  fetch(`https://sheikhelorderback-production.up.railway.app/api/getUser/${userId}`)
+  fetch(`https://sheikhelorderback-production.up.railway.app/api/getUser/${userId}/${userName}`)
     .then(response => {
       return response.json();
     }).then(user => {
