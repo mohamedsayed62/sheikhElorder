@@ -32,7 +32,11 @@ btnSaveUser.addEventListener("click", () => {
 
   let formData = new FormData();
   formData.append("name", name.value);
-  formData.append("image", file);
+    if (userImgInput.value == "") {
+    formData.append("image", "");
+  } else {
+    formData.append("image", file);
+  }
   fetch("https://sheikhelorderback-production.up.railway.app/api/storeUser", {
     method: "POST",
     credentials: "include",
