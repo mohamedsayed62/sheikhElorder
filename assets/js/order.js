@@ -131,6 +131,6 @@ formData["categories"] = [];
     credentials: "include"
     }
   ).then((response) => {
-    return window.open("group.html", "_self");
+    //return window.open("group.html", "_self");
   })
 }
