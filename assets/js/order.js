@@ -75,13 +75,12 @@ addCatBtn.onclick = () => {
 let addOrderBtn = document.querySelector(".add-order");
 
 addOrderBtn.onclick = () => {
-  let formData = [];
+  let formData = {};
 
-  
+
   let names = document.querySelectorAll("input.name");
 
-  
-formData["categories"] = [];
+  formData["categories"] = [];
   names.forEach((name, index) => {
 
     let categoryItems = {
@@ -118,8 +117,6 @@ formData["categories"] = [];
   orderSummary["baid"] = parseInt(paid.value);
 
   formData["orders"] = orderSummary;
-
-
 
   fetch("https://sheikhelorderback-production.up.railway.app/api/storeOrder", {
     method: "POST",
