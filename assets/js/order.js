@@ -81,19 +81,22 @@ addOrderBtn.onclick = () => {
   let names = document.querySelectorAll("input.name");
 
   
+formData["category"] = [];
   names.forEach((name, index) => {
-    let category = {
+
+    let categoryItems = {
       "name": "",
       "price": 0,
       "amount": 0,
       "total_price": 0
     }
-    category["name"] = name.value;
-    category["price"] = prices[index].value;
-    category["amount"] = amounts[index].value;
-    category["total_price"] = total[index].value;
-    
-    formData.push(category);
+    categoryItems["name"] = name.value;
+    categoryItems["price"] = prices[index].value;
+    categoryItems["amount"] = amounts[index].value;
+    categoryItems["total_price"] = total[index].value;
+
+    formData["categories"].push(categoryItems);
+
   })
 
   let arrCookie = document.cookie.split(";");
@@ -102,11 +105,11 @@ addOrderBtn.onclick = () => {
   let boxId = arrCookie[1].slice(arrCookie[1].length - 1);
   let id = JSON.parse(localStorage.getItem("user"))["id"];
   let orderSummary = {
-    "group_id": groupId,
-    "box_id": boxId,
-    "user_id": id,
-    "price": 0,
-    "baid": 0
+      "group_id": groupId,
+      "box_id": boxId,
+      "user_id": id,
+      "price": 0,
+      "baid": 0
   }
 
   
@@ -114,7 +117,7 @@ addOrderBtn.onclick = () => {
   orderSummary["price"] = parseInt(totalPrice.textContent);
   orderSummary["baid"] = parseInt(paid.value);
 
-  formData.push(orderSummary);
+  formData["orders"] = orderSummary;
 
 
 
