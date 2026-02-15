@@ -81,7 +81,7 @@ addOrderBtn.onclick = () => {
   let names = document.querySelectorAll("input.name");
 
   
-formData["category"] = [];
+formData["categories"] = [];
   names.forEach((name, index) => {
 
     let categoryItems = {
