@@ -2,7 +2,7 @@ if (localStorage.getItem("user")) {
   let userName = JSON.parse(localStorage.getItem("user"))["name"];
   let userId = JSON.parse(localStorage.getItem("user"))["id"];
   let iptName = document.getElementById("user-name");
-  fetch(`https://sheikhelorderback-production.up.railway.app/api/getUser/${userId}/${userName}`)
+  fetch(`https://sheikhelorderback-production-2477.up.railway.app/api/getUser/${userId}/${userName}`)
     .then(response => {
       return response.json();
     }).then(user => {
@@ -37,7 +37,7 @@ btnSaveUser.addEventListener("click", () => {
   } else {
     formData.append("image", file);
   }
-  fetch("https://sheikhelorderback-production.up.railway.app/api/storeUser", {
+  fetch("https://sheikhelorderback-production-2477.up.railway.app/api/storeUser", {
     method: "POST",
     credentials: "include",
     body:formData
@@ -73,7 +73,7 @@ joinBtn.onclick = () => {
 
   let id = JSON.parse(localStorage.getItem("user"))["id"];
 
-  fetch(`https://sheikhelorderback-production.up.railway.app/api/joinGroup/${key}/${id}`)
+  fetch(`https://sheikhelorderback-production-2477.up.railway.app/api/joinGroup/${key}/${id}`)
     .then((response) => {
       return response.json();
     }).then(json => {
