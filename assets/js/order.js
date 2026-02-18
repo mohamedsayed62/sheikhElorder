@@ -118,7 +118,7 @@ addOrderBtn.onclick = () => {
 
   formData["orders"] = orderSummary;
 
-  fetch("https://sheikhelorderback-production.up.railway.app/api/storeOrder", {
+  fetch("https://sheikhelorderback-production-2477.up.railway.app/api/storeOrder", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
