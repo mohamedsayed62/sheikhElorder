@@ -4,7 +4,7 @@ let groupId = document.cookie.slice(document.cookie.indexOf("group_id") + "group
 if (document.cookie == "") {
   window.open("index.html", "_self");
 }
-fetch(`https://sheikhelorderback-production.up.railway.app/api/check/${id}`)
+fetch(`https://sheikhelorderback-production-2477.up.railway.app/api/check/${id}`)
   .then(response => {
     return response.json();
   }).then((json) => {
@@ -95,7 +95,7 @@ function boxOrder(json, counter) {
 let boxsCounter = 0;
 setInterval(
   () => {
-      fetch(`https://sheikhelorderback-production.up.railway.app/api/getBoxs/${groupId}`)
+      fetch(`https://sheikhelorderback-production-2477.up.railway.app/api/getBoxs/${groupId}`)
       .then(response => {
         return response.json();
       }).then(json => {
@@ -110,7 +110,7 @@ setInterval(
 
 
 createOrderBtn.addEventListener("click", () => {
-  fetch(`https://sheikhelorderback-production.up.railway.app/api/setBox/${groupId}`);
+  fetch(`https://sheikhelorderback-production-2477.up.railway.app/api/setBox/${groupId}`);
 })
 
 
@@ -119,7 +119,7 @@ let counter = 0;
 function loadResponse() {
   let userBox = document.querySelectorAll(".user-box");
   if (!(groupId)) return;
-  fetch(`https://sheikhelorderback-production.up.railway.app/api/getGroup/${groupId}`, {
+  fetch(`https://sheikhelorderback-production-2477.up.railway.app/api/getGroup/${groupId}`, {
     credentials: "include"
   }).then(response => {
     return response.json();
@@ -184,7 +184,7 @@ setInterval(() => {
     user.onclick = () => {
       let index = Array.from(document.querySelectorAll(".user-box")).indexOf(user.parentElement);
 
-      fetch(`https://sheikhelorderback-production.up.railway.app/api/showOrder/${user.getAttribute("data-user-id")}`)
+      fetch(`https://sheikhelorderback-production-2477.up.railway.app/api/showOrder/${user.getAttribute("data-user-id")}`)
         .then(response => {
           return response.json();
         }).then(json => {
@@ -235,7 +235,7 @@ setInterval(() => {
     btn.onclick = () => {
       let order = btn.parentElement.parentElement.getAttribute("data-order");
       let index = Array.from(document.querySelectorAll(".order")).indexOf(btn.parentElement);
-      fetch(`https://sheikhelorderback-production.up.railway.app/api/getOrder/${order}`)
+      fetch(`https://sheikhelorderback-production-2477.up.railway.app/api/getOrder/${order}`)
         .then(response => {
           return response.json();
         }).then(json => {
